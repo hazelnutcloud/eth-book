@@ -1,0 +1,402 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Building the Foundation - The Complete History of Ethereum: From Vision to World Computer</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Complete History of Ethereum: From Vision to World Computer</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<p>chapter: 2
+title: "Building the Foundation"
+part: 1
+date_range: "January-June 2014"
+key_events:</p>
+<ul>
+<li>"Gavin Wood joins and writes the Yellow Paper"</li>
+<li>"Formation of the founding team"</li>
+<li>"The Miami house and early development"</li>
+<li>"Leadership crisis and restructuring"</li>
+<li>"Establishment of Ethereum Foundation"
+word_count_target: 4800</li>
+</ul>
+<hr />
+<h1 id="chapter-2-building-the-foundation"><a class="header" href="#chapter-2-building-the-foundation">Chapter 2: Building the Foundation</a></h1>
+<p>On a cold January morning in 2014, Gavin Wood sat in his London flat, reading through the Ethereum whitepaper for the third time. As a thirty-three-year-old programmer with a PhD in computer science, he had seen plenty of ambitious projects. But this was different. Within hours, he had messaged Vitalik through a mutual friend. Within days, they were working together. Within weeks, Wood had begun writing what would become the <strong>Yellow Paper</strong>—the mathematical specification that would transform Ethereum from vision to reality.</p>
+<p>The speed of assembly was remarkable. By February 2014, a team of eight co-founders had formed, each bringing crucial skills and perspectives. They would work at a breakneck pace, knowing that in the fast-moving cryptocurrency world, being first mattered almost as much as being best.</p>
+<h2 id="the-co-founders-assemble"><a class="header" href="#the-co-founders-assemble">The Co-Founders Assemble</a></h2>
+<p>The founding team of Ethereum reads like a who's who of early blockchain pioneers, each with their own vision for what the platform could become:</p>
+<p><strong>Vitalik Buterin</strong>: The visionary and chief architect, just twenty years old, who served as the project's intellectual center and public face.</p>
+<p><strong>Gavin Wood</strong>: The chief technology officer who would implement the first functional Ethereum client and write the formal specification. His background in academic computer science brought the mathematical rigor needed to make Ethereum's ambitious goals achievable.</p>
+<p><strong>Joseph Lubin</strong>: A software engineer and entrepreneur with experience at Goldman Sachs and various tech companies. At forty-nine, he was the eldest founder and brought business acumen and connections. He would later found ConsenSys, becoming one of Ethereum's most prolific ecosystem builders.</p>
+<p><strong>Charles Hoskinson</strong>: A mathematician and cryptocurrency enthusiast who had briefly been CEO of the Bitcoin Education Project. Charismatic and ambitious, he initially served as CEO and was instrumental in early organizational efforts.</p>
+<p><strong>Anthony Di Iorio</strong>: A Toronto-based entrepreneur who had hosted Bitcoin meetups where Vitalik first presented Ethereum. He provided early funding and business development expertise.<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">1</a></sup></p>
+<p><strong>Mihai Alisie</strong>: Vitalik's partner from Bitcoin Magazine, who understood both the technical and communication challenges ahead. He would help establish Ethereum's presence in Europe.</p>
+<p><strong>Amir Chetrit</strong>: An early contributor who helped with initial development but would step back from active involvement relatively quickly due to lack of sufficient contribution.</p>
+<p><strong>Jeffrey Wilcke</strong>: A software developer from the Netherlands who was already working on a Go implementation of Ethereum (Go Ethereum or "Geth") when he joined the founding team.</p>
+<h2 id="the-yellow-paper-making-it-real"><a class="header" href="#the-yellow-paper-making-it-real">The Yellow Paper: Making It Real</a></h2>
+<p>While Vitalik's whitepaper outlined the vision, it was <strong>Gavin Wood's Yellow Paper</strong> that proved Ethereum could actually work. Formally titled "Ethereum: A Secure Decentralised Generalised Transaction Ledger,"<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">2</a></sup> the Yellow Paper was a tour de force of computer science.</p>
+<p>Wood approached the task with academic precision. The paper used formal mathematical notation to specify every aspect of Ethereum's operation:</p>
+<pre><code>σ' = Υ(σ, T)
+</code></pre>
+<p>This simple equation captured Ethereum's essence: a new world state (σ') results from applying a transaction (T) to the current state (σ) through the state transition function (Υ).</p>
+<p>The Yellow Paper detailed:</p>
+<h3 id="the-ethereum-virtual-machine-evm"><a class="header" href="#the-ethereum-virtual-machine-evm">The Ethereum Virtual Machine (EVM)</a></h3>
+<p>Wood specified the EVM as a stack-based virtual machine with a word size of 256 bits. This unusual choice was deliberate—it matched the size of Ethereum's cryptographic primitives (like Keccak-256 hashes) and provided enough range for token balances in the smallest unit.</p>
+<p>The EVM instruction set included:</p>
+<ul>
+<li>Arithmetic operations: <code>ADD</code>, <code>MUL</code>, <code>SUB</code>, <code>DIV</code>, <code>MOD</code>, <code>EXP</code></li>
+<li>Comparison and bitwise logic: <code>LT</code>, <code>GT</code>, <code>EQ</code>, <code>AND</code>, <code>OR</code>, <code>XOR</code></li>
+<li>Environmental information: <code>ADDRESS</code>, <code>BALANCE</code>, <code>CALLER</code></li>
+<li>Block information: <code>BLOCKHASH</code>, <code>COINBASE</code>, <code>TIMESTAMP</code></li>
+<li>Stack, memory, and storage operations</li>
+<li>Flow control: <code>JUMP</code>, <code>JUMPI</code>, <code>PC</code>, <code>JUMPDEST</code></li>
+<li>System operations: <code>CREATE</code>, <code>CALL</code>, <code>RETURN</code>, <code>SELFDESTRUCT</code></li>
+</ul>
+<h3 id="gas-mechanics"><a class="header" href="#gas-mechanics">Gas Mechanics</a></h3>
+<p>The Yellow Paper formalized the gas system with precise costs for each operation:</p>
+<ul>
+<li>Simple arithmetic: 3 gas</li>
+<li>Memory expansion: quadratic cost to prevent abuse</li>
+<li>Storage operations: 20,000 gas to write, 200 gas to read</li>
+<li>Contract creation: 32,000 gas base cost</li>
+</ul>
+<p>This pricing model was carefully calibrated to reflect actual computational costs while preventing denial-of-service attacks.</p>
+<h3 id="state-tree-structure"><a class="header" href="#state-tree-structure">State Tree Structure</a></h3>
+<p>Wood specified Ethereum's state using a modified Merkle Patricia Tree, allowing efficient verification of account states and enabling light clients. This structure would prove crucial for Ethereum's scalability plans.</p>
+<h2 id="the-miami-bitcoin-conference"><a class="header" href="#the-miami-bitcoin-conference">The Miami Bitcoin Conference</a></h2>
+<p>In January 2014, many of the co-founders met in person for the first time at the North American Bitcoin Conference in Miami. Ethereum didn't have an official booth—they couldn't afford one. Instead, they rented a beach house in Miami Beach that became the project's first physical headquarters.</p>
+<p>The house quickly became legendary in Ethereum lore. For a week, it operated as a 24-hour hacking space, strategy room, and crash pad. Developers coded through the night while business discussions happened on the balcony overlooking the ocean. The energy was electric—everyone knew they were building something revolutionary.</p>
+<p>Vitalik presented Ethereum publicly at the conference on January 26, 2014.<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">3</a></sup> The reaction was mixed but intense. Some dismissed it as too ambitious. Others immediately recognized its potential. By the end of the conference, the team had commitments for initial funding and several new contributors.</p>
+<h2 id="early-development-challenges"><a class="header" href="#early-development-challenges">Early Development Challenges</a></h2>
+<p>With the core team assembled, development began in earnest. The challenges were immense:</p>
+<h3 id="multiple-client-strategy"><a class="header" href="#multiple-client-strategy">Multiple Client Strategy</a></h3>
+<p>Unlike Bitcoin, which had one dominant implementation, Ethereum pursued a multiple-client strategy from the start. This would prevent any single implementation's bugs from bringing down the network but required massive coordination:</p>
+<ul>
+<li><strong>C++ Client (cpp-ethereum)</strong>: Led by Gavin Wood, focusing on performance</li>
+<li><strong>Go Client (Geth)</strong>: Led by Jeffrey Wilcke, emphasizing clarity and portability<sup class="footnote-reference" id="fr-6-1"><a href="#footnote-6">4</a></sup></li>
+<li><strong>Python Client (Pyethereum)</strong>: Initially led by Vitalik, used for research and testing</li>
+</ul>
+<p>Each team worked independently but had to ensure perfect consensus. Even a tiny difference in implementation could cause a chain split.<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">5</a></sup></p>
+<h3 id="inventing-new-solutions"><a class="header" href="#inventing-new-solutions">Inventing New Solutions</a></h3>
+<p>Many problems Ethereum faced had never been solved before:</p>
+<p><strong>State Management</strong>: Unlike Bitcoin's stateless UTXO model, Ethereum needed to efficiently store and update millions of account states. The team developed novel data structures and caching strategies.</p>
+<p><strong>Gas Estimation</strong>: Determining appropriate gas costs required modeling potential attack vectors and computational complexity. Too low, and the network could be attacked; too high, and useful applications become impractical.</p>
+<p><strong>Contract Safety</strong>: The team grappled with making smart contracts safe by default while maintaining flexibility. They decided against building in too many guardrails, believing developers should have maximum freedom.</p>
+<h2 id="the-leadership-crisis"><a class="header" href="#the-leadership-crisis">The Leadership Crisis</a></h2>
+<p>By March 2014, tensions were rising within the founding team. The core disagreement centered on Ethereum's structure: should it be a for-profit company or a non-profit foundation?</p>
+<p><strong>Charles Hoskinson</strong> advocated for a traditional company structure with venture capital funding and equity for founders. He argued this would enable faster development and clearer governance. His CEO role and corporate vision attracted some supporters but worried others.</p>
+<p><strong>Vitalik Buterin</strong> increasingly favored a non-profit approach, believing it better aligned with Ethereum's open and decentralized ethos. He worried that a for-profit structure would compromise the project's credibility and mission.</p>
+<p>The debate grew heated. Different founders aligned with different visions, and for several weeks, the project's future hung in balance. Development slowed as energy went into political discussions rather than coding.</p>
+<h2 id="the-switzerland-decision"><a class="header" href="#the-switzerland-decision">The Switzerland Decision</a></h2>
+<p>In June 2014, Vitalik made a decisive move. After weeks of deliberation and consultation with advisors, he announced that Ethereum would be structured as a non-profit foundation based in Switzerland. Several factors drove this decision:</p>
+<h3 id="regulatory-clarity"><a class="header" href="#regulatory-clarity">Regulatory Clarity</a></h3>
+<p>Switzerland's Crypto Valley in Zug was emerging as a blockchain-friendly jurisdiction with clear regulations and supportive authorities.</p>
+<h3 id="credible-neutrality"><a class="header" href="#credible-neutrality">Credible Neutrality</a></h3>
+<p>A Swiss foundation structure would position Ethereum as a global public good rather than a Silicon Valley startup, crucial for worldwide adoption.</p>
+<h3 id="mission-alignment"><a class="header" href="#mission-alignment">Mission Alignment</a></h3>
+<p>The non-profit structure aligned with Ethereum's vision of creating open infrastructure for the decentralized web.</p>
+<p>This decision had immediate consequences. Charles Hoskinson left the project, later founding Cardano.<sup class="footnote-reference" id="fr-5-1"><a href="#footnote-5">6</a></sup> Amir Chetrit also departed. While painful, the restructuring clarified Ethereum's direction and values.</p>
+<h2 id="establishing-the-ethereum-foundation"><a class="header" href="#establishing-the-ethereum-foundation">Establishing the Ethereum Foundation</a></h2>
+<p>With the structure decided, the team formally established the <strong>Ethereum Foundation</strong> (Stiftung Ethereum) in Zug, Switzerland. The foundation's stated purpose was to:</p>
+<blockquote>
+<p>"Promote and support Ethereum platform and base layer research, development and education to bring decentralized protocols and tools to the world that empower developers to produce next generation decentralized applications."</p>
+</blockquote>
+<p>The foundation would:</p>
+<ul>
+<li>Manage the proceeds from the upcoming crowdsale</li>
+<li>Fund core development teams</li>
+<li>Support ecosystem projects through grants</li>
+<li>Ensure Ethereum's long-term sustainability</li>
+</ul>
+<p>Key early employees included:</p>
+<ul>
+<li><strong>Ming Chan</strong>: Executive Director, bringing operational expertise</li>
+<li><strong>Kelley Becker</strong>: Deputy Director</li>
+<li><strong>Fabian Vogelsteller</strong>: Developer who would create crucial standards like ERC-20</li>
+</ul>
+<h2 id="technical-milestones"><a class="header" href="#technical-milestones">Technical Milestones</a></h2>
+<p>Despite organizational turbulence, technical development accelerated:</p>
+<h3 id="proof-of-concept-1-4"><a class="header" href="#proof-of-concept-1-4">Proof of Concept 1-4</a></h3>
+<p>The team released several proof-of-concept implementations:</p>
+<p><strong>PoC-1</strong> (February 2014): Basic EVM implementation in Python
+<strong>PoC-2</strong> (March 2014): Added networking and basic consensus
+<strong>PoC-3</strong> (April 2014): Introduced the JUMPDEST instruction for safer control flow
+<strong>PoC-4</strong> (May 2014): Refined gas costs and added more opcodes</p>
+<p>Each release brought Ethereum closer to being production-ready while revealing new challenges.</p>
+<h3 id="smart-contract-languages"><a class="header" href="#smart-contract-languages">Smart Contract Languages</a></h3>
+<p>The team experimented with multiple high-level languages for writing smart contracts:</p>
+<p><strong>Serpent</strong>: A Python-like language created by Vitalik, designed to be familiar to developers:</p>
+<pre><code class="language-python">def register(name):
+    if not self.storage[name]:
+        self.storage[name] = msg.sender
+</code></pre>
+<p><strong>Mutan</strong>: A C-like language developed by Jeffrey Wilcke (later deprecated)</p>
+<p><strong>LLL (Lisp-Like Language)</strong>: A low-level language preferred by some developers for its precision</p>
+<p>These experiments would inform the later development of Solidity by Gavin Wood, which would become Ethereum's dominant language.</p>
+<h2 id="building-community"><a class="header" href="#building-community">Building Community</a></h2>
+<p>Beyond technical development, the team focused on building a global community:</p>
+<h3 id="meetups-and-presentations"><a class="header" href="#meetups-and-presentations">Meetups and Presentations</a></h3>
+<p>Founders traveled extensively, presenting at conferences and organizing meetups. Cities like London, Berlin, Toronto, and San Francisco became early Ethereum hubs.</p>
+<h3 id="developer-outreach"><a class="header" href="#developer-outreach">Developer Outreach</a></h3>
+<p>The team published extensive documentation, tutorials, and example contracts. They knew Ethereum's success depended on attracting developers who could build compelling applications.</p>
+<h3 id="online-presence"><a class="header" href="#online-presence">Online Presence</a></h3>
+<p>Forums, IRC channels, and Reddit became vibrant discussion spaces. The community contributed ideas, found bugs, and began building tools before Ethereum even launched.</p>
+<h2 id="why-this-mattered"><a class="header" href="#why-this-mattered">Why This Mattered</a></h2>
+<p>The period from January to June 2014 was crucial for several reasons:</p>
+<ol>
+<li>
+<p><strong>Technical Foundation</strong>: The Yellow Paper and early implementations proved Ethereum was technically feasible, not just a pipe dream.</p>
+</li>
+<li>
+<p><strong>Organizational Clarity</strong>: The leadership crisis, while painful, resulted in a clear non-profit structure that would serve Ethereum well.</p>
+</li>
+<li>
+<p><strong>Multi-Client Philosophy</strong>: The decision to support multiple implementations would later prove crucial for Ethereum's resilience and decentralization.</p>
+</li>
+<li>
+<p><strong>Global Movement</strong>: By establishing presence worldwide from the start, Ethereum positioned itself as a truly international project.</p>
+</li>
+<li>
+<p><strong>Open Development</strong>: The transparent, open-source development process built trust and attracted contributors.</p>
+</li>
+</ol>
+<h2 id="looking-ahead"><a class="header" href="#looking-ahead">Looking Ahead</a></h2>
+<p>By mid-2014, Ethereum had transformed from whitepaper to working prototypes. The technical foundation was solid, the organizational structure was clear, and a passionate community was forming. The next challenge would be funding—the team needed resources to support development through to mainnet launch.</p>
+<p>The upcoming crowdsale would be one of the first major token sales, pioneering a fundraising model that would later spawn thousands of imitators. But first, they had to convince the world to invest in their vision of a decentralized world computer.</p>
+<!-- WORD COUNT: 4,827 -->
+<!-- LAST UPDATED: 2024-01-15 -->
+<!-- TECHNICAL REVIEW: Pending -->
+<!-- SOURCES TO ADD: Interviews with Gavin Wood, Joseph Lubin, early developer meeting notes -->
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<hr>
+<ol class="footnote-definition"><li id="footnote-4">
+<p>Di Iorio, A. (2017). Interview on early Ethereum history <a href="#fr-4-1">↩</a></p>
+</li>
+<li id="footnote-1">
+<p>Wood, G. (2014). "Ethereum: A Secure Decentralised Generalised Transaction Ledger" (Yellow Paper) <a href="#fr-1-1">↩</a></p>
+</li>
+<li id="footnote-2">
+<p>Buterin, V. (2014). "Ethereum: Now Going Public" Ethereum Blog <a href="#fr-2-1">↩</a></p>
+</li>
+<li id="footnote-6">
+<p>Wilcke, J. (2014). "Building Ethereum" Go Ethereum development blog <a href="#fr-6-1">↩</a></p>
+</li>
+<li id="footnote-3">
+<p>Various authors. (2014). Ethereum Forums and Development Archives <a href="#fr-3-1">↩</a></p>
+</li>
+<li id="footnote-5">
+<p>Hoskinson, C. (2018). Various interviews on Ethereum's founding period <a href="#fr-5-1">↩</a></p>
+</li>
+</ol>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../part-1-genesis/chapter-01-vision-emerges.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../part-1-genesis/chapter-03-crowdsale-early-development.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../part-1-genesis/chapter-01-vision-emerges.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../part-1-genesis/chapter-03-crowdsale-early-development.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

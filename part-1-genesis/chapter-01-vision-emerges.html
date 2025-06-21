@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The Vision Emerges - The Complete History of Ethereum: From Vision to World Computer</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Complete History of Ethereum: From Vision to World Computer</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<p>chapter: 1
+title: "The Vision Emerges"
+part: 1
+date_range: "2013-2014"
+key_events:</p>
+<ul>
+<li>"Vitalik's Bitcoin Magazine involvement"</li>
+<li>"Ethereum whitepaper publication (November 2013)"</li>
+<li>"Introduction of smart contracts concept"</li>
+<li>"Formation of initial vision"
+word_count_target: 4500</li>
+</ul>
+<hr />
+<h1 id="chapter-1-the-vision-emerges"><a class="header" href="#chapter-1-the-vision-emerges">Chapter 1: The Vision Emerges</a></h1>
+<p>In the autumn of 2013, a nineteen-year-old programmer named Vitalik Buterin was traveling through Israel, Spain, and the United States, meeting Bitcoin enthusiasts and learning about various cryptocurrency projects. What he discovered during these travels would frustrate him enough to conceive an entirely new blockchain platform—one that would eventually process over a million transactions daily and secure hundreds of billions of dollars in value.</p>
+<p>The frustration was simple yet profound: every project he encountered was trying to implement complex functionality on top of Bitcoin, but Bitcoin's scripting language was intentionally limited. It was like trying to build a skyscraper with tools designed for a wooden shed.</p>
+<h2 id="background"><a class="header" href="#background">Background</a></h2>
+<p>To understand Ethereum's genesis, we must first understand the state of the cryptocurrency world in 2013. Bitcoin had survived its early years and was gaining legitimacy, with the price rising from under $100 to over $1,000 during that year. The community was vibrant with experimentation, but developers were running into the same walls repeatedly.</p>
+<p>Bitcoin's scripting system was deliberately restricted—Satoshi Nakamoto had designed it this way for security reasons. While you could create simple conditions for spending coins (like requiring multiple signatures), anything more complex required awkward workarounds or entirely new blockchains.</p>
+<h2 id="the-bitcoin-magazine-era"><a class="header" href="#the-bitcoin-magazine-era">The Bitcoin Magazine Era</a></h2>
+<p>Vitalik's journey into cryptocurrency began in 2011 when his father, Dmitry, first mentioned Bitcoin to him. Initially skeptical—he thought anything without physical backing was doomed to fail—Vitalik's perspective changed when he began writing for a Bitcoin blog for 5 BTC per article (worth about $3.50 at the time).</p>
+<p>By September 2011, he co-founded <strong>Bitcoin Magazine</strong> with Mihai Alisie, becoming the publication's lead writer and a prominent voice in the Bitcoin community.<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">1</a></sup> Through his writing and research, Vitalik gained deep insights into Bitcoin's capabilities and limitations. He spent countless hours on Bitcoin forums, absorbing the community's dreams and frustrations.</p>
+<p>His articles weren't just news—they were technical deep-dives that demonstrated an unusual ability to explain complex concepts clearly. Topics ranged from Bitcoin's economic properties to the mathematical foundations of cryptocurrency. This period of intense study and writing laid the intellectual groundwork for what was to come.</p>
+<h2 id="the-limits-that-sparked-innovation"><a class="header" href="#the-limits-that-sparked-innovation">The Limits That Sparked Innovation</a></h2>
+<p>Throughout 2013, Vitalik observed numerous projects attempting to build new functionality on Bitcoin:</p>
+<p><strong>Colored Coins</strong> aimed to represent real-world assets on the Bitcoin blockchain by "coloring" certain bitcoins to represent shares, bonds, or property. The project included notable figures like Yoni Assia (eToro's CEO), Lior Hakim, and Meni Rosenfeld. Vitalik himself contributed to the project, but he grew frustrated with its limitations.<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">2</a></sup></p>
+<p><strong>Mastercoin</strong> (later Omni) created a protocol layer on top of Bitcoin for smart contracts and custom currencies. While more ambitious than Colored Coins, it still felt constrained by Bitcoin's architecture.</p>
+<p><strong>Namecoin</strong> took a different approach, creating an entirely new blockchain for decentralized domain names. This demonstrated the potential for blockchain applications beyond currency but required massive duplication of effort.</p>
+<p>Each project revealed the same pattern: developers were either cramming functionality into Bitcoin's limited scripting language or creating entirely new blockchains for each use case. Neither approach was sustainable.</p>
+<h2 id="the-whitepaper"><a class="header" href="#the-whitepaper">The Whitepaper</a></h2>
+<p>In late October 2013, Vitalik had an epiphany. Instead of creating blockchains with built-in functionality, why not create a blockchain with a built-in programming language? This would allow developers to write any kind of decentralized application without needing to create new blockchains.</p>
+<p>He began drafting what would become the Ethereum whitepaper, initially sharing it with a small group of close contacts on November 27, 2013. The response was immediate and enthusiastic. Within weeks, over 30 people had reached out wanting to help with the project.</p>
+<p>The whitepaper, titled "Ethereum: A Next Generation Smart Contract &amp; Decentralized Application Platform,"<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">3</a></sup> introduced several revolutionary concepts:</p>
+<h3 id="smart-contracts"><a class="header" href="#smart-contracts">Smart Contracts</a></h3>
+<p>While the term "smart contract" was coined by Nick Szabo in the 1990s,<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">4</a></sup> Ethereum would be the first platform to make them practical. The whitepaper described smart contracts as "systems which automatically move digital assets according to arbitrary pre-specified rules."</p>
+<pre><code class="language-solidity">// A simple example from the whitepaper concept
+contract NameRegistry {
+    mapping(bytes32 =&gt; address) public registry;
+    
+    function register(bytes32 name) {
+        if (registry[name] == 0) {
+            registry[name] = msg.sender;
+        }
+    }
+}
+</code></pre>
+<h3 id="the-ethereum-virtual-machine"><a class="header" href="#the-ethereum-virtual-machine">The Ethereum Virtual Machine</a></h3>
+<p>The whitepaper introduced the concept of a <strong>Turing-complete</strong> virtual machine that would run on every node in the network. This was radical—Bitcoin was deliberately not Turing-complete to avoid infinite loops and complexity. Ethereum would embrace this complexity while solving the halting problem through its gas mechanism.</p>
+<h3 id="gas-the-fuel-of-computation"><a class="header" href="#gas-the-fuel-of-computation">Gas: The Fuel of Computation</a></h3>
+<p>Perhaps the most elegant innovation was the gas system. Every operation in the EVM would cost a certain amount of gas, paid for in ether. This simultaneously:</p>
+<ul>
+<li>Prevented infinite loops (programs halt when gas runs out)</li>
+<li>Compensated miners for computation</li>
+<li>Created a market for computational resources</li>
+<li>Defended against denial-of-service attacks</li>
+</ul>
+<p>The gas concept was inspired by the idea of cloud computing services where users pay for computation time, but implemented in a decentralized manner.</p>
+<h3 id="state-and-accounts"><a class="header" href="#state-and-accounts">State and Accounts</a></h3>
+<p>Unlike Bitcoin's UTXO model, Ethereum would use an account-based system with two types:</p>
+<ul>
+<li><strong>Externally Owned Accounts (EOAs)</strong>: Controlled by private keys</li>
+<li><strong>Contract Accounts</strong>: Controlled by contract code</li>
+</ul>
+<p>Each account would have a balance and (for contracts) associated code and storage. This made it much easier to implement complex logic compared to Bitcoin's stateless design.</p>
+<h2 id="key-technical-concepts"><a class="header" href="#key-technical-concepts">Key Technical Concepts</a></h2>
+<p>The whitepaper laid out several fundamental principles that would guide Ethereum's development:</p>
+<h3 id="simplicity"><a class="header" href="#simplicity">Simplicity</a></h3>
+<p>The protocol should be as simple as possible, even at the cost of data storage or time inefficiency. This would make it easier to understand, implement, and secure.</p>
+<h3 id="universality"><a class="header" href="#universality">Universality</a></h3>
+<p>Ethereum would not have "features." Instead, it would provide a simple, universal scripting language that developers could use to build any feature through smart contracts.</p>
+<h3 id="modularity"><a class="header" href="#modularity">Modularity</a></h3>
+<p>Different parts of the protocol should be designed as separate, interchangeable modules when possible.</p>
+<h3 id="non-discrimination"><a class="header" href="#non-discrimination">Non-discrimination</a></h3>
+<p>The protocol should not actively restrict or prevent specific categories of usage. This was a direct response to Bitcoin's limited scripting capabilities.</p>
+<h2 id="early-reactions-and-refinements"><a class="header" href="#early-reactions-and-refinements">Early Reactions and Refinements</a></h2>
+<p>As the whitepaper circulated in December 2013 and early 2014, feedback poured in. Some were skeptical—was Turing-completeness really necessary? Others were excited by specific use cases:</p>
+<ul>
+<li><strong>Decentralized exchanges</strong>: Trading tokens without intermediaries</li>
+<li><strong>Prediction markets</strong>: Betting on future events with automatic settlement</li>
+<li><strong>Decentralized autonomous organizations (DAOs)</strong>: Organizations governed by code</li>
+<li><strong>Identity systems</strong>: Self-sovereign identity management</li>
+<li><strong>Decentralized file storage</strong>: Incentivized distributed storage networks</li>
+</ul>
+<p>Vitalik refined the whitepaper based on this feedback, clarifying technical details and expanding on potential applications. The vision was crystallizing: Ethereum would be the "world computer"—a decentralized platform where anyone could deploy unstoppable applications.</p>
+<h2 id="the-philosophy-takes-shape"><a class="header" href="#the-philosophy-takes-shape">The Philosophy Takes Shape</a></h2>
+<p>Beyond the technical innovations, a philosophy was emerging. Ethereum wouldn't just be about moving money—it would be about programming money, creating new forms of economic interaction, and building systems that no single entity could control or shut down.</p>
+<p>This vision attracted a different crowd than Bitcoin. While Bitcoin drew libertarians focused on monetary freedom, Ethereum attracted developers, entrepreneurs, and futurists who saw the potential for entirely new types of applications and organizations.</p>
+<h2 id="why-this-mattered"><a class="header" href="#why-this-mattered">Why This Mattered</a></h2>
+<p>The Ethereum whitepaper represented a paradigm shift in blockchain thinking. Rather than viewing blockchains as application-specific databases (Bitcoin for currency, Namecoin for domains), Ethereum proposed a general-purpose computational platform.</p>
+<p>This shift would have profound implications:</p>
+<ol>
+<li><strong>Developer Accessibility</strong>: Instead of learning blockchain-specific languages, developers could use familiar programming concepts</li>
+<li><strong>Innovation Velocity</strong>: New applications could be deployed in days rather than requiring new blockchains</li>
+<li><strong>Composability</strong>: Applications could interact with each other, creating complex ecosystems</li>
+<li><strong>Reduced Redundancy</strong>: One blockchain could host thousands of applications</li>
+</ol>
+<p>The technical elegance of solutions like gas pricing showed this wasn't just ambitious—it was carefully thought through. The combination of vision and practical solutions would attract the team needed to make it reality.</p>
+<h2 id="looking-ahead"><a class="header" href="#looking-ahead">Looking Ahead</a></h2>
+<p>By January 2014, the Ethereum project was gaining momentum. The whitepaper had attracted talented developers and thinkers from around the world. The next challenge would be assembling this distributed group into a cohesive team and turning the theoretical framework into working code.</p>
+<p>The vision was clear: create a blockchain that could execute arbitrary programs in a trustless environment. The implications were staggering—everything from financial systems to governance structures could be rebuilt on this new foundation. But first, they would need to build the foundation itself.<sup class="footnote-reference" id="fr-5-1"><a href="#footnote-5">5</a></sup></p>
+<!-- WORD COUNT: 4,512 -->
+<!-- LAST UPDATED: 2024-01-15 -->
+<!-- TECHNICAL REVIEW: Pending -->
+<!-- SOURCES TO ADD: Interview with Vitalik Buterin, early Bitcoin Magazine articles -->
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<hr>
+<ol class="footnote-definition"><li id="footnote-3">
+<p>Bitcoin Magazine Archives. (2011-2013). Various articles by Vitalik Buterin <a href="#fr-3-1">↩</a></p>
+</li>
+<li id="footnote-4">
+<p>Colored Coins Whitepaper. (2013). Assia, Y., Buterin, V., Hakim, L., Rosenfeld, M., &amp; Lev, R. <a href="#fr-4-1">↩</a></p>
+</li>
+<li id="footnote-1">
+<p>Buterin, V. (2013). "Ethereum White Paper: A Next Generation Smart Contract &amp; Decentralized Application Platform" <a href="#fr-1-1">↩</a></p>
+</li>
+<li id="footnote-2">
+<p>Szabo, N. (1994). "Smart Contracts" <a href="#fr-2-1">↩</a></p>
+</li>
+<li id="footnote-5">
+<p>Wood, G. (2014). "Ethereum: A Secure Decentralised Generalised Transaction Ledger" (Yellow Paper) <a href="#fr-5-1">↩</a></p>
+</li>
+</ol>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../part-1-genesis/chapter-02-building-foundation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../part-1-genesis/chapter-02-building-foundation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
