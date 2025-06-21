@@ -27,7 +27,7 @@ Bitcoin's scripting system was deliberately restricted—Satoshi Nakamoto had de
 
 Vitalik's journey into cryptocurrency began in 2011 when his father, Dmitry, first mentioned Bitcoin to him. Initially skeptical—he thought anything without physical backing was doomed to fail—Vitalik's perspective changed when he began writing for a Bitcoin blog for 5 BTC per article (worth about $3.50 at the time).
 
-By September 2011, he co-founded **Bitcoin Magazine** with Mihai Alisie, becoming the publication's lead writer and a prominent voice in the Bitcoin community. Through his writing and research, Vitalik gained deep insights into Bitcoin's capabilities and limitations. He spent countless hours on Bitcoin forums, absorbing the community's dreams and frustrations.
+By September 2011, he co-founded **Bitcoin Magazine** with Mihai Alisie, becoming the publication's lead writer and a prominent voice in the Bitcoin community.[^3] Through his writing and research, Vitalik gained deep insights into Bitcoin's capabilities and limitations. He spent countless hours on Bitcoin forums, absorbing the community's dreams and frustrations.
 
 His articles weren't just news—they were technical deep-dives that demonstrated an unusual ability to explain complex concepts clearly. Topics ranged from Bitcoin's economic properties to the mathematical foundations of cryptocurrency. This period of intense study and writing laid the intellectual groundwork for what was to come.
 
@@ -35,7 +35,7 @@ His articles weren't just news—they were technical deep-dives that demonstrate
 
 Throughout 2013, Vitalik observed numerous projects attempting to build new functionality on Bitcoin:
 
-**Colored Coins** aimed to represent real-world assets on the Bitcoin blockchain by "coloring" certain bitcoins to represent shares, bonds, or property. The project included notable figures like Yoni Assia (eToro's CEO), Lior Hakim, and Meni Rosenfeld. Vitalik himself contributed to the project, but he grew frustrated with its limitations.
+**Colored Coins** aimed to represent real-world assets on the Bitcoin blockchain by "coloring" certain bitcoins to represent shares, bonds, or property. The project included notable figures like Yoni Assia (eToro's CEO), Lior Hakim, and Meni Rosenfeld. Vitalik himself contributed to the project, but he grew frustrated with its limitations.[^4]
 
 **Mastercoin** (later Omni) created a protocol layer on top of Bitcoin for smart contracts and custom currencies. While more ambitious than Colored Coins, it still felt constrained by Bitcoin's architecture.
 
@@ -49,11 +49,11 @@ In late October 2013, Vitalik had an epiphany. Instead of creating blockchains w
 
 He began drafting what would become the Ethereum whitepaper, initially sharing it with a small group of close contacts on November 27, 2013. The response was immediate and enthusiastic. Within weeks, over 30 people had reached out wanting to help with the project.
 
-The whitepaper, titled "Ethereum: A Next Generation Smart Contract & Decentralized Application Platform," introduced several revolutionary concepts:
+The whitepaper, titled "Ethereum: A Next Generation Smart Contract & Decentralized Application Platform,"[^1] introduced several revolutionary concepts:
 
 ### Smart Contracts
 
-While the term "smart contract" was coined by Nick Szabo in the 1990s, Ethereum would be the first platform to make them practical. The whitepaper described smart contracts as "systems which automatically move digital assets according to arbitrary pre-specified rules."
+While the term "smart contract" was coined by Nick Szabo in the 1990s,[^2] Ethereum would be the first platform to make them practical. The whitepaper described smart contracts as "systems which automatically move digital assets according to arbitrary pre-specified rules."
 
 ```solidity
 // A simple example from the whitepaper concept
@@ -141,7 +141,7 @@ The technical elegance of solutions like gas pricing showed this wasn't just amb
 
 By January 2014, the Ethereum project was gaining momentum. The whitepaper had attracted talented developers and thinkers from around the world. The next challenge would be assembling this distributed group into a cohesive team and turning the theoretical framework into working code.
 
-The vision was clear: create a blockchain that could execute arbitrary programs in a trustless environment. The implications were staggering—everything from financial systems to governance structures could be rebuilt on this new foundation. But first, they would need to build the foundation itself.
+The vision was clear: create a blockchain that could execute arbitrary programs in a trustless environment. The implications were staggering—everything from financial systems to governance structures could be rebuilt on this new foundation. But first, they would need to build the foundation itself.[^5]
 
 <!-- WORD COUNT: 4,512 -->
 <!-- LAST UPDATED: 2024-01-15 -->

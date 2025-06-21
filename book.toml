@@ -1,0 +1,7 @@
+[book]
+authors = ["Hasan Mukhlis", "Claude"]
+language = "en"
+src = "src"
+title = "The Complete History of Ethereum: From Vision to World Computer"
+
+[preprocessor.yml-header]

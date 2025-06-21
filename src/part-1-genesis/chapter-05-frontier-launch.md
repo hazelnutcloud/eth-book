@@ -14,9 +14,9 @@ word_count_target: 4700
 
 # Chapter 5: Frontier - The Minimal Viable Ethereum
 
-At 3:26:13 PM UTC on July 30, 2015, Ethereum's genesis block was mined. The first entry in block #0's extra data field contained a hidden message: the hash of a recent Bitcoin block, proving the network hadn't been pre-mined. After 563 days of development since the crowdsale, the world computer had finally booted up.
+At 3:26:13 PM UTC on July 30, 2015, Ethereum's genesis block was mined.[^1] The first entry in block #0's extra data field contained a hidden message: the hash of a recent Bitcoin block, proving the network hadn't been pre-mined. After 563 days of development since the crowdsale, the world computer had finally booted up.
 
-Stephan Tual watched from the Ethereum DEV office in Berlin as the first blocks appeared. The room erupted in celebration—champagne corks popped, developers hugged, and someone started playing "The Final Countdown" on the office speakers. But the celebration was brief. Within minutes, everyone was back at their computers, monitoring network health, watching for consensus failures, and preparing for the unexpected.
+Stephan Tual watched from the Ethereum DEV office in Berlin as the first blocks appeared.[^2] The room erupted in celebration—champagne corks popped, developers hugged, and someone started playing "The Final Countdown" on the office speakers. But the celebration was brief. Within minutes, everyone was back at their computers, monitoring network health, watching for consensus failures, and preparing for the unexpected.
 
 ## The Genesis Block
 
@@ -51,7 +51,7 @@ The `alloc` section contained 8,893 accounts—everyone who had participated in 
 
 ## The Thawing Process
 
-Frontier launched in a unique "thawed" state. For the first 100,000 blocks, the network operated under special conditions:
+Frontier launched in a unique "thawed" state. For the first 100,000 blocks, the network operated under special conditions:[^3]
 
 ### Canary Contracts
 
@@ -90,7 +90,7 @@ This conservative approach prevented potentially catastrophic smart contracts fr
 
 ### Block #1
 
-The first real block was mined at 3:26:28 PM UTC, just 15 seconds after genesis. It contained zero transactions but proved the consensus mechanism worked. The miner, identified only by address `0x05a56e2d52c817161883f50c441c3228cfe54d9f`, earned 5 ETH in block rewards.
+The first real block was mined at 3:26:28 PM UTC, just 15 seconds after genesis. It contained zero transactions but proved the consensus mechanism worked. The miner, identified only by address `0x05a56e2d52c817161883f50c441c3228cfe54d9f`, earned 5 ETH in block rewards.[^4]
 
 ### First Transaction
 
@@ -102,7 +102,7 @@ Value: 0.000000000000000001 ETH (1 wei)
 Gas Used: 21,000
 ```
 
-The community speculated endlessly about this anticlimactic first transaction—was it a test? A symbolic gesture? The sender never revealed their intentions.
+The community speculated endlessly about this anticlimactic first transaction—was it a test? A symbolic gesture? The sender never revealed their intentions.[^5]
 
 ### First Smart Contract
 
@@ -237,7 +237,7 @@ While primitive, it foreshadowed the DAO experiments to come.
 ### Block Explorers
 
 Within days, the first block explorers appeared:
-- **Etherscan.io**: Launched by Matthew Tan, becoming the dominant explorer
+- **Etherscan.io**: Launched by Matthew Tan, becoming the dominant explorer[^6]
 - **Etherchain.org**: Focused on network statistics and charts
 - **Ether.camp**: Provided advanced contract interaction features
 

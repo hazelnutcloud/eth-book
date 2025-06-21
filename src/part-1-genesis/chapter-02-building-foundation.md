@@ -30,7 +30,7 @@ The founding team of Ethereum reads like a who's who of early blockchain pioneer
 
 **Charles Hoskinson**: A mathematician and cryptocurrency enthusiast who had briefly been CEO of the Bitcoin Education Project. Charismatic and ambitious, he initially served as CEO and was instrumental in early organizational efforts.
 
-**Anthony Di Iorio**: A Toronto-based entrepreneur who had hosted Bitcoin meetups where Vitalik first presented Ethereum. He provided early funding and business development expertise.
+**Anthony Di Iorio**: A Toronto-based entrepreneur who had hosted Bitcoin meetups where Vitalik first presented Ethereum. He provided early funding and business development expertise.[^4]
 
 **Mihai Alisie**: Vitalik's partner from Bitcoin Magazine, who understood both the technical and communication challenges ahead. He would help establish Ethereum's presence in Europe.
 
@@ -40,7 +40,7 @@ The founding team of Ethereum reads like a who's who of early blockchain pioneer
 
 ## The Yellow Paper: Making It Real
 
-While Vitalik's whitepaper outlined the vision, it was **Gavin Wood's Yellow Paper** that proved Ethereum could actually work. Formally titled "Ethereum: A Secure Decentralised Generalised Transaction Ledger," the Yellow Paper was a tour de force of computer science.
+While Vitalik's whitepaper outlined the vision, it was **Gavin Wood's Yellow Paper** that proved Ethereum could actually work. Formally titled "Ethereum: A Secure Decentralised Generalised Transaction Ledger,"[^1] the Yellow Paper was a tour de force of computer science.
 
 Wood approached the task with academic precision. The paper used formal mathematical notation to specify every aspect of Ethereum's operation:
 
@@ -85,7 +85,7 @@ In January 2014, many of the co-founders met in person for the first time at the
 
 The house quickly became legendary in Ethereum lore. For a week, it operated as a 24-hour hacking space, strategy room, and crash pad. Developers coded through the night while business discussions happened on the balcony overlooking the ocean. The energy was electric—everyone knew they were building something revolutionary.
 
-Vitalik presented Ethereum publicly at the conference on January 26, 2014. The reaction was mixed but intense. Some dismissed it as too ambitious. Others immediately recognized its potential. By the end of the conference, the team had commitments for initial funding and several new contributors.
+Vitalik presented Ethereum publicly at the conference on January 26, 2014.[^2] The reaction was mixed but intense. Some dismissed it as too ambitious. Others immediately recognized its potential. By the end of the conference, the team had commitments for initial funding and several new contributors.
 
 ## Early Development Challenges
 
@@ -96,10 +96,10 @@ With the core team assembled, development began in earnest. The challenges were 
 Unlike Bitcoin, which had one dominant implementation, Ethereum pursued a multiple-client strategy from the start. This would prevent any single implementation's bugs from bringing down the network but required massive coordination:
 
 - **C++ Client (cpp-ethereum)**: Led by Gavin Wood, focusing on performance
-- **Go Client (Geth)**: Led by Jeffrey Wilcke, emphasizing clarity and portability  
+- **Go Client (Geth)**: Led by Jeffrey Wilcke, emphasizing clarity and portability[^6]  
 - **Python Client (Pyethereum)**: Initially led by Vitalik, used for research and testing
 
-Each team worked independently but had to ensure perfect consensus. Even a tiny difference in implementation could cause a chain split.
+Each team worked independently but had to ensure perfect consensus. Even a tiny difference in implementation could cause a chain split.[^3]
 
 ### Inventing New Solutions
 
@@ -134,7 +134,7 @@ A Swiss foundation structure would position Ethereum as a global public good rat
 ### Mission Alignment
 The non-profit structure aligned with Ethereum's vision of creating open infrastructure for the decentralized web.
 
-This decision had immediate consequences. Charles Hoskinson left the project, later founding Cardano. Amir Chetrit also departed. While painful, the restructuring clarified Ethereum's direction and values.
+This decision had immediate consequences. Charles Hoskinson left the project, later founding Cardano.[^5] Amir Chetrit also departed. While painful, the restructuring clarified Ethereum's direction and values.
 
 ## Establishing the Ethereum Foundation
 

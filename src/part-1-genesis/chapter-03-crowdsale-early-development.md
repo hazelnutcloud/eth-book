@@ -14,7 +14,7 @@ word_count_target: 4600
 
 # Chapter 3: The Crowdsale and Early Development
 
-On July 22, 2014, at exactly 9:00 AM Pacific Time, the Ethereum crowdsale went live. Within the first twelve hours, the project had raised over 3,700 bitcoins—worth approximately $2.3 million at the time. Vitalik Buterin watched the numbers climb from a coffee shop in Toronto, refreshing the dashboard every few minutes. Each contribution represented not just funding, but a vote of confidence in a vision that existed only in code repositories and whitepapers.
+On July 22, 2014, at exactly 9:00 AM Pacific Time, the Ethereum crowdsale went live.[^1] Within the first twelve hours, the project had raised over 3,700 bitcoins—worth approximately $2.3 million at the time. Vitalik Buterin watched the numbers climb from a coffee shop in Toronto, refreshing the dashboard every few minutes. Each contribution represented not just funding, but a vote of confidence in a vision that existed only in code repositories and whitepapers.
 
 The crowdsale would run for 42 days, becoming one of the largest crowdfunding efforts in history at that time. More importantly, it would establish a new model for funding open-source protocols—one that aligned incentives between developers and early adopters while avoiding traditional venture capital structures.
 
@@ -39,7 +39,7 @@ The legal landscape for token sales was uncharted territory. The team worked wit
 - Detailed terms and conditions explained the experimental nature
 - Geographic restrictions excluded certain jurisdictions
 
-The foundation published extensive documentation explaining that ether was intended as a utility token for paying gas fees, not an investment vehicle. This framing would influence thousands of future token sales.
+The foundation published extensive documentation explaining that ether was intended as a utility token for paying gas fees, not an investment vehicle.[^6] This framing would influence thousands of future token sales.
 
 ### Technical Infrastructure
 
@@ -95,7 +95,7 @@ When the sale ended on September 2, 2014:
 - Total raised: **31,591 BTC** (approximately $18.4 million)
 - ETH sold: **60,102,216 ETH**
 - Number of purchasers: Over **9,000 unique addresses**
-- Average purchase: ~6,700 ETH (3.5 BTC)
+- Average purchase: ~6,700 ETH (3.5 BTC)[^2]
 
 Additionally, the foundation allocated:
 - 9.9% of the initial supply to early contributors (pre-sale)
@@ -120,7 +120,7 @@ Berlin's vibrant tech scene and relatively low costs made it ideal. The city wou
 
 By September 2014, the team released PoC-5, a major milestone that included:
 
-**Solidity Introduction**: Gavin Wood unveiled Solidity, a new contract-oriented programming language:
+**Solidity Introduction**: Gavin Wood unveiled Solidity, a new contract-oriented programming language:[^3]
 ```solidity
 contract Token {
     mapping(address => uint) balances;
@@ -145,7 +145,7 @@ Solidity's JavaScript-like syntax made it accessible to web developers while inc
 Each client implementation raced toward feature completeness:
 
 #### Geth (Go-Ethereum)
-Jeffrey Wilcke's team focused on creating a production-ready client:
+Jeffrey Wilcke's team focused on creating a production-ready client:[^4]
 - Clean, readable codebase
 - Excellent performance
 - Strong networking capabilities
@@ -188,7 +188,7 @@ The team developed extensive test suites, including:
 - State transition tests
 - VM operation tests  
 - Block validation tests
-- Network protocol tests
+- Network protocol tests[^5]
 
 ### Smart Contract Development
 

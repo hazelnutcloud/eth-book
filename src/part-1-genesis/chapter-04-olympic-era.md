@@ -51,7 +51,7 @@ By early 2015, several critical components had crystallized:
 
 ### Security Preparations
 
-Stephan Tual, Ethereum's CCO, coordinated a comprehensive security effort:
+Stephan Tual, Ethereum's CCO, coordinated a comprehensive security effort:[^1]
 
 - Formal verification attempts on critical components
 - External security audits by firms like Least Authority
@@ -64,7 +64,7 @@ The team knew that once mainnet launched with real value at stake, fixing critic
 
 ### The Announcement
 
-Vitalik announced Olympic with characteristic understatement on the Ethereum blog:
+Vitalik announced Olympic with characteristic understatement on the Ethereum blog:[^3]
 
 > "Olympic is the Ethereum network's last major milestone before the release of Frontier. It is meant to test the network under high load conditions, test security, and test the mining ecosystem."
 
@@ -179,7 +179,7 @@ The bug bounty attracted diverse participants:
 - Curious hackers
 - Competing blockchain developers
 
-The transparent process, with public disclosure after fixes, built confidence in Ethereum's security posture.
+The transparent process, with public disclosure after fixes, built confidence in Ethereum's security posture.[^4]
 
 ## Stress Testing at Scale
 
@@ -268,7 +268,7 @@ The testnet period saw massive documentation improvements:
 - Best practices guides emerged
 - Security patterns documented
 
-The community wiki grew to hundreds of pages, capturing collective knowledge.
+The community wiki grew to hundreds of pages, capturing collective knowledge.[^6]
 
 ## Preparing for Mainnet
 
@@ -276,7 +276,7 @@ As Olympic progressed, the team made final preparations for Frontier:
 
 ### The "Thawing" Process
 
-The team designed a unique launch strategy. Frontier would launch "frozen" with a difficulty bomb making mining nearly impossible. Then, at a predetermined block, it would "thaw":
+The team designed a unique launch strategy. Frontier would launch "frozen" with a difficulty bomb making mining nearly impossible. Then, at a predetermined block, it would "thaw":[^2]
 
 ```go
 // Simplified thawing logic
@@ -352,7 +352,7 @@ By late June 2015, Olympic had achieved its goals:
 - Network proven stable under load
 - Mining ecosystem established
 - Developer tools maturing
-- Community battle-tested and ready
+- Community battle-tested and ready[^5]
 
 The team announced Frontier's launch date: July 30, 2015.
 
